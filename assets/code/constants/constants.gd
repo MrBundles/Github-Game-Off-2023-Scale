@@ -1,8 +1,7 @@
 #@tool
-#class_name name_of_class
-extends Node2D
+class_name Constants
 
-# purpose: This node will manage scene loading/unloading as well as the persistance of some game data
+# purpose: Provides a central class for ease of reference to common constants across the project
 
 # signals ----------------------------------------------------------------------------------------------------------------
 
@@ -11,12 +10,14 @@ extends Node2D
 # constants --------------------------------------------------------------------------------------------------------------
 
 # variables --------------------------------------------------------------------------------------------------------------
-@export_group("Level Variables")
-@export var level_array: Array[PackedScene]
-
-@export_group("Menu Variables")
-@export var menu_array: Array[PackedScene]
-
+enum MENU_IDS{
+	main,
+	settings,
+	level_select,
+	credits,
+	score,
+	feedback
+}
 
 # main functions ---------------------------------------------------------------------------------------------------------
 func _ready():
