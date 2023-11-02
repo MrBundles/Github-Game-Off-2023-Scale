@@ -1,8 +1,8 @@
 #@tool
-#class_name name_of_class
-extends Node2D
+class_name Menu
+extends Control
 
-# purpose: This node will manage scene loading/unloading as well as the persistance of some game data
+# purpose: 
 
 # signals ----------------------------------------------------------------------------------------------------------------
 
@@ -11,11 +11,6 @@ extends Node2D
 # constants --------------------------------------------------------------------------------------------------------------
 
 # variables --------------------------------------------------------------------------------------------------------------
-@export_group("Level Variables")
-@export var level_array = []
-
-@export_group("Menu Variables")
-@export var menu_array = []
 
 
 # main functions ---------------------------------------------------------------------------------------------------------
