@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://cnwffn7el05gw"]
+
+[ext_resource type="Texture2D" uid="uid://h41ni7ttoyx7" path="res://icon.svg" id="1_dk2yj"]
+[ext_resource type="Script" path="res://scenes/game/characters/player/character_player.gd" id="1_mimmm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fsd1q"]
+size = Vector2(32, 32)
+
+[node name="CharacterPlayer" type="CharacterBody2D"]
+script = ExtResource("1_mimmm")
+h_accel = 26
+h_decel = 26
+h_max = 50
+jump_accel = 25
+gravity = 500
+v_max = 100
+v_min = -100
+delta_mult = 1000
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_dk2yj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_fsd1q")
+
+[node name="CoyoteTimer" type="Timer" parent="."]
+wait_time = 0.1
+
+[connection signal="timeout" from="CoyoteTimer" to="." method="_on_coyote_timer_timeout"]

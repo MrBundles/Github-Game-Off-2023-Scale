@@ -1,8 +1,8 @@
 #@tool
-class_name Menu
-extends Control
+#class_name name_of_class
+extends Node
 
-# purpose: Base scene on which all menu scenes will be built
+# purpose: Base level scene on which all levels in the game will be built
 
 # signals ----------------------------------------------------------------------------------------------------------------
 
